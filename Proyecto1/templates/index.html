@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1> Inicio </h1>
+{% with messages =  get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<p>{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+</body>
+{% endblock %}
