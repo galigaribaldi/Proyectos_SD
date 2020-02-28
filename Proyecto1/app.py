@@ -32,10 +32,22 @@ def usuario():
     resp = jsonify(datos)
     return resp
 
+@app.route('/fechaConsulta/<id>')
+def fecha(id ):
+    datos = coneccion.actualiza_fecha(id)
+    resp  =jsonify(datos)
+    return resp
+
 @app.route('/usuario/<id>')
 def usuario2(id):
     datos = coneccion.consulta_usuario(id)
     resp = jsonify(datos)
+    return resp
+
+@app.route('/fechaConsulta/<id>')
+def fecha2():
+    datos = coneccion.actualiza_fecha(id)
+    resp  =jsonify(datos)
     return resp
 
 ##Delete
