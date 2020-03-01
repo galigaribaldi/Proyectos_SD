@@ -22,8 +22,9 @@ def cajero():
 
 @app.route('/cajero/<id>')
 def cajero2(id):
-    datos = coneccion.consulta_cuenta(id)
-    resp = jsonify(datos)
+    datos1 = coneccion.consulta_cuenta(id)
+    datos = coneccion.actualiza_fecha(id)
+    resp = jsonify(datos1)
     return resp
 
 @app.route('/usuario')
@@ -40,6 +41,7 @@ def fecha(id ):
 
 @app.route('/usuario/<id>')
 def usuario2(id):
+    datos1 = coneccion.actualiza_fecha(id)
     datos = coneccion.consulta_usuario(id)
     resp = jsonify(datos)
     return resp
@@ -62,6 +64,20 @@ def usuario3(id):
     datos = coneccion.consulta_usuario(id)
     resp = jsonify(datos)
     return resp
+
+@app.route('/respuesta/<id>')
+def respuesta(id):
+    datos = coneccion.consulta_cuenta(id)
+    usuario = coneccion.consulta_usuario(id)
+    resp = datos
+    return render_template('cajero.html', messages=resp, usuario=usuario)
+
+
+@app.route('/lista_cuentas/')
+def lista_cuentas():
+    messages = coneccion.consulta_cuenta_all()
+    print(messages)
+    return render_template('cuentas.html', messages=messages)
 
 ##Update
 ############################################################################

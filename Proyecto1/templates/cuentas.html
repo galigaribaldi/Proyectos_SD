@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1> Inicio </h1>
+<table>
+    <tr>
+
+        <th>Cuenta bancaria</th>
+        <th>Monto</th>
+        <th>Fecha de apertura</th>
+        <th>Ultima fecha de consulta</th>
+    </tr>
+
+    {% for message in messages %}
+    <tr>
+    <td>{{ message[0] }}</td>
+    <td>{{ message[2] }}</td>
+    <td>{{ message[4] }}</td>
+    <td>{{ message[1] }}</td>
+</tr>
+    {% endfor %}
+
+
+
+</table>
+
+</table>
+
+{% endblock %}
+
+<body>
+
+</body>

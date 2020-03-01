@@ -46,5 +46,4 @@ def actualiza_fecha(cuenta_id):
     mariadb_conexion.commit()
     mariadb_conexion.close()
     return datos
-
-#mariadb_conexion.close()
+    

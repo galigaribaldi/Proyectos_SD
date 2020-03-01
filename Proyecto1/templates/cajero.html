@@ -1,4 +1,29 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1> Pagina de ayudas </h1>
+<h1> Inicio </h1>
+
+<table>
+    <tr>
+
+        <th>Nombre</th>
+        <th>Monto</th>
+        <th>Cuenta</th>
+        <th>Fecha de apertura</th>
+        <th>Ultima fecha de consulta</th>
+    </tr>
+
+<tr>
+    <td>{{ usuario[0][1] }} {{ usuario[0][2] }} {{  usuario[0][3] }}</td>
+    <td>{{ messages[0][2] }}</td>
+    <td>{{ messages[0][0] }}</td>
+    <td>{{ messages[0][4] }}</td>
+    <td>{{ messages[0][1] }}</td>
+</tr>
+
+</table>
+
 {% endblock %}
+
+<body>
+
+</body>
