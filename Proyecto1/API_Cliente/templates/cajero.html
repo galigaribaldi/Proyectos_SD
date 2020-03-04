@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1> Inicio </h1>
+<table>
+    <tr>
+
+        <th>Clave de la cuenta</th>
+        <th>Fecha Ultima Consulta</th>
+        <th>Monto</th>
+        <th>Estado</th>
+        <th>Fecha de Apertura</th>
+    </tr>
+
+    {% for message in messages %}
+    <td>{{ message[0] }}</td>
+    <td>{{ message[1] }}</td>
+    <td>{{ message[2] }}</td>
+    <td>{{ message[3] }}</td>
+    <td>{{ message[4] }}</td>
+</tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

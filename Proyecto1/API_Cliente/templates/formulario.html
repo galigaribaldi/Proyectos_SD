@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1> Inicio </h1>
+
+
+    <form action="/usuario">
+        <h2>Acceso</h2>
+        <input type="text" name="usuario_id" placeholder="Contraseña">
+        <input type="text" name="nombre" placeholder="Apellido Paterno">
+        <input type="text" name="ap_pat" placeholder="Apellido Paterno">
+        <input type="text" name="ap_mat" placeholder="Apellido Materno">
+        <button type="submit"> Entrar </button>
+    </form>
+
+
+{% endblock %}
+
