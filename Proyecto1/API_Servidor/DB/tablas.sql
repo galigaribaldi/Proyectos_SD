@@ -1,10 +1,10 @@
 --
 -- ER/Studio 8.0 SQL Code Generation
 -- Company :      UNAM
--- Project :      Bancaria.DM1
+-- Project :      bancaria1.DM1
 -- Author :       galigaribaldi@live.com
 --
--- Date Created : Tuesday, March 03, 2020 23:50:12
+-- Date Created : Friday, March 06, 2020 17:47:30
 -- Target DBMS : MySQL 5.x
 --
 
@@ -13,12 +13,9 @@
 --
 
 CREATE TABLE CUENTA_BANCARIA(
-    CUENTA_BANCARIA_ID    DECIMAL(40, 0)    NOT NULL,
-    FECHA_CONSULTA        VARCHAR(40)       NOT NULL,
-    SALDO                 DECIMAL(40, 0)    NOT NULL,
-    ESTADO                VARCHAR(40)       NOT NULL,
-    FECHA_APERTURA        VARCHAR(40)       NOT NULL,
-    PRIMARY KEY (CUENTA_BANCARIA_ID)
+    FECHA_CONSULTA       VARCHAR(40),
+    SALDO                VARCHAR(40),
+    USUARIO_CUENTA_ID    INT            NOT NULL
 )ENGINE=MYISAM
 ;
 
@@ -29,14 +26,11 @@ CREATE TABLE CUENTA_BANCARIA(
 --
 
 CREATE TABLE USUARIO(
-    USUARIO_ID          DECIMAL(40, 0)    NOT NULL,
-    NOMBRE              VARCHAR(40)       NOT NULL,
-    APELLIDO_PATERNO    VARCHAR(40)       NOT NULL,
+    USUARIO_ID          INT            NOT NULL,
+    EDAD                VARCHAR(40),
+    NOMBRE              VARCHAR(40),
+    APELLIDO_PATERNO    VARCHAR(40),
     APELLIDO_MATERNO    VARCHAR(40),
-    EDAD                VARCHAR(40)       NOT NULL,
-    DIRECCION           VARCHAR(40)       NOT NULL,
-    CURP                VARCHAR(40)       NOT NULL,
-    TELEFONO            VARCHAR(40)       NOT NULL,
     PRIMARY KEY (USUARIO_ID)
 )ENGINE=MYISAM
 ;
@@ -48,10 +42,31 @@ CREATE TABLE USUARIO(
 --
 
 CREATE TABLE USUARIO_CUENTA(
-    USUARIO_CUENTA_ID    DECIMAL(40, 0)    NOT NULL,
+    USUARIO_CUENTA_ID    INT    NOT NULL,
+    USUARIO_ID           INT    NOT NULL,
     PRIMARY KEY (USUARIO_CUENTA_ID)
 )ENGINE=MYISAM
 ;
 
+
+
+-- 
+-- TABLE: CUENTA_BANCARIA 
+--
+
+ALTER TABLE CUENTA_BANCARIA ADD CONSTRAINT RefUSUARIO_CUENTA3 
+    FOREIGN KEY (USUARIO_CUENTA_ID)
+    REFERENCES USUARIO_CUENTA(USUARIO_CUENTA_ID)
+;
+
+
+-- 
+-- TABLE: USUARIO_CUENTA 
+--
+
+ALTER TABLE USUARIO_CUENTA ADD CONSTRAINT RefUSUARIO2 
+    FOREIGN KEY (USUARIO_ID)
+    REFERENCES USUARIO(USUARIO_ID)
+;
 
 
