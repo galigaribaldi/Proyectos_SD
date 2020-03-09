@@ -33,7 +33,6 @@ def usuario():
         usuario_id = request.form['usuario_id']
         nombre = request.form['nombre']
         ap_pat = request.form['ap_pat']
-        ap_mat = request.form['ap_mat']
         ruta = 'http://127.0.0.1:5000/usuario/' + usuario_id
         try:
             datos = requests.get(ruta)

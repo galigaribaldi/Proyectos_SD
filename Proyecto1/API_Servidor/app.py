@@ -23,7 +23,7 @@ def cajero():
 @app.route('/cajero/<id>')
 def cajero2(id):
     datos1 = coneccion.consulta_cuenta(id)
-    datos = coneccion.actualiza_fecha(id)
+    #datos = coneccion.actualiza_fecha(id)
     resp = jsonify(datos1)
     return resp
 
@@ -32,25 +32,26 @@ def usuario():
     datos = coneccion.consulta_cuenta_all()
     resp = jsonify(datos)
     return resp
-
+"""
 @app.route('/fechaConsulta/<id>')
 def fecha(id ):
     datos = coneccion.actualiza_fecha(id)
     resp  =jsonify(datos)
     return resp
-
+"""
 @app.route('/usuario/<id>')
 def usuario2(id):
-    datos1 = coneccion.actualiza_fecha(id)
+    #datos1 = coneccion.actualiza_fecha(id)
     datos = coneccion.consulta_usuario(id)
     resp = jsonify(datos)
     return resp
 
 @app.route('/fechaConsulta/<id>')
 def fecha2():
-    datos = coneccion.actualiza_fecha(id)
-    resp  =jsonify(datos)
-    return resp
+    #datos = coneccion.actualiza_fecha(id)
+    #resp  =jsonify(datos)
+    #return resp
+    pass
 
 ##Delete
 @app.route('/cajero/eliminar/<id>')

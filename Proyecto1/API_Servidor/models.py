@@ -22,7 +22,7 @@ def consulta_usuario_all():
 def consulta_cuenta(cuenta_id):
     mariadb_conexion = pymysql.connect('localhost','gali','12345','base1')
     cursor = mariadb_conexion.cursor()
-    cursor.execute("SELECT * FROM CUENTA_BANCARIA WHERE CUENTA_BANCARIA_ID=%s",(cuenta_id,))
+    cursor.execute("SELECT * FROM CUENTA_BANCARIA WHERE USUARIO_CUENTA_ID=%s",(cuenta_id,))
     datos = cursor.fetchall()
     print(datos)
     mariadb_conexion.commit()
