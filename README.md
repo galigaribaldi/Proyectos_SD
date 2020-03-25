@@ -40,7 +40,7 @@ Tomando como base los programas generados en la tarea #5 (Sockets) realice lo si
    - Se deben instalar unas librerias en ubuntu 19.04, estos viene expllicados en el siguiente enlace [Instrucciones](https://github.com/galigaribaldi/Proyectos_SD/blob/master/Proyecto2/Berkley/instrucciones.sh)
 
    - `mpicc -showme`este comando nos servirá para saber que extensión usar en este programa
-   - ``mpicc -g -I/usr/lib/x86_64-linux-gnu/openmpi/include -o main main.c -lm` finalmente usaremos esta linea para corre nuestro programa.
+   - `mpicc -g -I/usr/lib/x86_64-linux-gnu/openmpi/include -o main main.c -lm` finalmente usaremos esta linea para corre nuestro programa.
 
 Para este proyecto, no es necesario el uso de mas máquinas virtuales o máquinas físicas, ya que ambos códigos, corren en una sola computadora o en diferentes terminales.
 
