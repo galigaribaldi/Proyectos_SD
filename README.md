@@ -37,7 +37,7 @@ Tomando como base los programas generados en la tarea #5 (Sockets) realice lo si
 
 2. **Implemente el algoritmo de Berkley para la sincronización de relojes ficticios implementando la comunicación multicast con hilos**
 
-   - Se deben instalar unas librerias en ubuntu 19.04, estos viene expllicados en el siguiente enlace
+   - Se deben instalar unas librerias en ubuntu 19.04, estos viene expllicados en el siguiente enlace [Instrucciones](https://github.com/galigaribaldi/Proyectos_SD/blob/master/Proyecto2/Berkley/instrucciones.sh)
 
    - `mpicc -showme`este comando nos servirá para saber que extensión usar en este programa
    - ``mpicc -g -I/usr/lib/x86_64-linux-gnu/openmpi/include -o main main.c -lm` finalmente usaremos esta linea para corre nuestro programa.
