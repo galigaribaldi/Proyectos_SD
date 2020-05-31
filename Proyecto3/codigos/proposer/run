@@ -1,0 +1,2 @@
+#!/bin/bash
+iex --name proposer@169.254.139.161 --cookie '123' -S mix
