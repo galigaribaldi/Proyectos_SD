@@ -46,9 +46,16 @@ Para este proyecto, no es necesario el uso de mas máquinas virtuales o máquina
 
 Este proyecto se encuentra en lenguaje C
 
+### Proyecto 3
+
+Para este proyecto se realizó una implementación del algoritmo de Paxos, un algoritmo de consenso centrado en sistemas distribuidos, para este algoritmo se usó el lenguaje Elixir.
+
+<img src="https://pbs.twimg.com/profile_images/1060264662258708480/Dhhe9AdS_400x400.jpg" alt="img" style="zoom:50%;" />
+
 ### Integrantes del Equipo
 
 * Cabrera Garibaldi Hernán Galileo
+* Barcenas Martínez Edgar Daniel
 * Gutiérrez Castillo Óscar
 * Medel Sánchez Berenice
 * Espinoza Jiménez Francisco Javier
